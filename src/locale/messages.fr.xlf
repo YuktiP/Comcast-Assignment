@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="profilePageTitle" datatype="html">
+        <source> Profile </source>
+        <target>Profil</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/profile-settings/profile-settings.component.html</context>
+          <context context-type="linenumber">3,7</context>
+        </context-group>
+        <note priority="1" from="description"> Profile Page </note>
+        <note priority="1" from="meaning">Page Title </note>
+      </trans-unit>
+      <trans-unit id="Username" datatype="html">
+        <source> Username </source>
+        <target>Nom d'utilisateur</target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/profile-settings/profile-settings.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+        <note priority="1" from="description"> Username </note>
+        <note priority="1" from="meaning">Usernamelabel </note>
+      </trans-unit>
+      <trans-unit id="Email" datatype="html">
+        <source> Email </source>
+        <target>E-mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/profile-settings/profile-settings.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+        <note priority="1" from="description"> Email </note>
+        <note priority="1" from="meaning">Emaillabel </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,36 @@
+<div>
+    <h1 i18n="Page Title | Profile Page @@profilePageTitle">
+    Profile
+  </h1>
+   
+    <div>
+        <p> <label> Username:</label>:&nbsp;  {{ user.username }} </p>
+    </div>
+    <div>
+        <p> <label> Email: </label>:&nbsp;{{ user.email }} </p>
+    </div>
+    <form (ngSubmit)="saveProfile()">
+    <div>
+        <label> First Name: </label>
+        <input  type ="text" 
+                name="firstName"
+                [(ngModel)]="user.firstName" 
+                [disabled]="fetching" 
+                (keyup)="clearError()"
+                (change)="user.firstName = user.firstName.trim()" />
+    </div>
+    <div>
+        <label> Last Name: </label>
+        <input  type ="text" 
+                name="lastName" 
+                [(ngModel)]="user.lastName" 
+                [disabled]="fetching" 
+                (keyup)="clearError()"
+                (change)="user.lastName = user.lastName.trim()" />
+    </div>
+    <input type ="submit" value ="Save" [disabled]="fetching" />
+    </form>
+    <p *ngIf="fetching"> Loading profile... </p>
+    <p *ngIf="saving"> Saving profile... </p>
+    <p *ngIf="error"> Error! {{error}} </p>
+</div>

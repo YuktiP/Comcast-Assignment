@@ -1,0 +1,12 @@
+<div>
+    Change Site Language : &nbsp;
+    <select
+    *ngIf="prodMode"
+    [(ngModel)]="selectedLocale"
+    #language
+    (change)="languageChange(language.value)" >
+        <option *ngFor="let l of languages" [value]="l.code">
+            {{ l.text }}
+        </option>
+    </select>
+</div>
