@@ -39,7 +39,9 @@ export class ProfileSettingsComponent implements OnInit {
     async saveProfile() { 
         this.saving = true;
         this.clearError();
-        let user = Object.assign({},this.profile.user);
+        let user = Object.assign({},this.profile.user); 
+        //can get the value using get, and store the previous value or 
+        //use formgroup,formcontrol to keep a track of value changes and reset value on error
         try{
             this.user = await this.profile.setName(this.user.firstName,this.user.lastName) as IProfile;
             this.user = await this.profile.setUserEmail() as IProfile
